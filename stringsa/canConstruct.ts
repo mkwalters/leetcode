@@ -24,3 +24,14 @@ const letterFreq = (s: string): Object => {
   }
   return frequency;
 };
+const letterFrequency = (s: string): Object => {
+  const frequency = {};
+  for (let currentChar of s) {
+    if (frequency.hasOwnProperty(currentChar)) {
+      frequency[currentChar] += 1;
+    } else {
+      frequency[currentChar] = 1;
+    }
+  }
+  return frequency;
+};
